@@ -1,0 +1,228 @@
+    @import url('https://fonts.googleapis.com/css?family=Roboto');
+    $darkBlue: #063547;
+    $greyLight: #f5f6f9;
+    $lightBlue: #44b89d;
+    $text: #0c0c0c;
+    $yellow:#f59e0d;
+    $mint:#11b981;
+    * {
+        box-sizing: border-box;
+    }
+    /*=================navbar===================*/
+    
+    nav {
+        height: 80px;
+        &.bg-dark {
+            background-color: $darkBlue !important;
+        }
+        li {
+            text-align: center;
+            text-transform: uppercase;
+            a.nav-link {
+                color: white;
+                height: 100%;
+                padding: 30px;
+                &.active {
+                    background: $lightBlue;
+                }
+                &:hover {
+                    background: $lightBlue;
+                }
+            }
+        }
+    }
+    /*=================end navbar===================*/
+    
+    .active {
+        color: white;
+    }
+    /*=================carousel===================*/
+    
+    [carrousel] {
+        display: flex;
+        position: relative;
+        //paint
+        // background-color: #47cf73;
+        min-height: 50vh;
+        &::before {
+            content: '';
+            display: block;
+            padding-bottom: 50%;
+        }
+        [name~="carrousel"] {
+            display: none;
+            &:checked {
+                +.slide {
+                    pointer-events: auto;
+                    opacity: 1;
+                    .slide-content {
+                        opacity: 1;
+                        display: grid;
+                        grid-template-columns: 50% 50%;
+                        grid-gap: 40px;
+                        padding: 0 80px;
+                        .text-slide {
+                            align-self: center;
+                        }
+                        img {
+                            width: 100%
+                        }
+                    }
+                }
+            }
+        }
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .slide-content {
+            opacity: 0;
+            transition: opacity 1s;
+        }
+        .back,
+        .forward {
+            display: block;
+            position: absolute;
+            top: calc(100% - 25px);
+            height: 50px;
+            width: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            user-select: none;
+            //paint
+            font-size: 30px;
+            background-color: $darkBlue;
+            border-radius: 50%;
+            color: $greyLight;
+            box-shadow: 0 2px 0 0 rgba(black, .1);
+            font-weight: 100;
+            z-index: 9;
+            &:hover {
+                background-color: $lightBlue;
+                cursor: pointer;
+            }
+        }
+        .back {
+            left: calc(0% + 20px);
+        }
+        .forward {
+            left: calc(0% + 80px);
+        }
+    }
+    
+    .center {
+        text-align: center;
+    }
+    
+    .white {
+        color: white;
+    }
+    
+    h1 {
+        font-size: 48px;
+        color: $text;
+        line-height: normal;
+        font-weight: 500;
+    }
+    
+    h2 {
+        font-size: 38px;
+        color: $text;
+        line-height: normal;
+        font-weight: 500;
+    }
+    
+    h3 {
+        font-size: 32px;
+        color: $text;
+        line-height: normal;
+        font-weight: 500;
+    }
+    
+    h4 {
+        font-size: 20px;
+        color: $lightBlue;
+        line-height: normal;
+    }
+    
+    p {
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 30px
+    }
+    /*================= end carousel===================*/
+    /*=================products===================*/
+    
+    [products] {
+        padding: 40px 100px;
+        background: white;
+        position: relative;
+        .searchBox {
+            border: 2px solid red;
+            text-align: center;
+            width: 65%;
+            margin: 10% auto auto auto;
+            img {
+                width: 24px;
+                background: green;
+            }
+        }
+    }
+    /*=================end products===================*/
+    /*=================ourBlog===================*/
+    
+    [ourBlog] {
+        padding: 40px 80px;
+        background: $greyLight;
+    }
+    /*=================end ourBlog===================*/
+    /*=================contact===================*/
+    
+    [contact] {
+        padding: 40px 80px;
+        background: white;
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 40% 60%;
+            grid-gap: 40px;
+            .contact-form {
+                // align-self: center;
+            }
+            img {
+                width: 100%
+            }
+        }
+    }
+    /*=================end contact===================*/
+    /*=================footer===================*/
+    
+    [footer] {
+        padding: 40px 100px;
+        background: $darkBlue;
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        grid-gap: 40px;
+    }
+    /*=================end footer===================*/
+    /*=================buttons===================*/
+    
+    .btn {
+        padding: 10px 50px;
+        border-radius: 28px;
+    }
+    
+    .btn-primary {
+        color: #fff;
+        background-color: $lightBlue;
+        border-color: $lightBlue;
+    }
+    /*================= end buttons ===================*/
