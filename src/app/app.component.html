@@ -9,13 +9,13 @@
                 <a class="nav-link active" href="#">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Products</a>
+                <a class="nav-link" href="#products">Products</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Blog</a>
+                <a class="nav-link" href="#blog">Blog</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Contact Us</a>
+                <a class="nav-link" href="#contact">Contact Us</a>
             </li>
         </ul>
     </div>
@@ -84,67 +84,84 @@
             <label for="slide-0" class="forward">›</label>
         </div>
     </section>
-    <section products>
+    <section products id="products">
         <h2 class="center">Products</h2>
         <div class="searchBox">
             <div class="input-group">
-                <input id="input" type="text" class="form-control input-lg" placeholder="Search for...">
+                <input id="input" type="text" class="form-control input-lg" placeholder="Search">
                 <span class="input-group-btn">
-                 <button id="searchBtn" class="btn btn-default" type="button"> <img src="../assets/img/search.png" alt=""></button>
+                 <button id="searchBtn" class="btn btn-circle" type="button"> <img src="../assets/img/search.png" alt=""></button>
                 </span>
+            </div>
 
-            </div>
-            <!-- /input-group -->
         </div>
-        <div class="card" style="width: 18rem;" *ngFor="let number of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]">
-            <img src="../assets/img/cat1.png" class="card-img-top" style="width:100px" alt=" ">
-            <div class="card-body ">
-                <h5 class="card-title ">Card title</h5>
-                <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="# " class="btn btn-primary ">Go somewhere</a>
-            </div>
+        <div class="cards">
+
+            <app-card [dataEntrance]="card" *ngFor="let card of cards"></app-card>
         </div>
+
     </section>
-    <section ourBlog>
+    <section ourBlog id="blog">
         <h3 class="center">From Our Blog</h3>
         <div class="card-grid">
-            <div class="card" style="width: 18rem;">
-                <img src="../assets/img/b1.jpg" class="card-img-top" style="width:300px" alt=" ">
+            <div class="card">
+                <img src="../assets/img/b1.jpg" class="card-img-top" alt=" ">
                 <div class="card-body ">
-                    <h5 class="card-title ">Card title</h5>
+                    <span class="btn card-label">19 January 2021</span>
+                    <p class="card-title">Eius, dolor? Vel velit sed doloremque</p>
                     <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="# " class="btn btn-primary ">Go somewhere</a>
+                    <a href="# " class="link">Read More</a>
                 </div>
             </div>
-            <div class="card" style="width: 18rem;">
-                <img src="../assets/img/b2.jpg" class="card-img-top" style="width:300px" alt=" ">
+            <div class="card">
+                <img src="../assets/img/b2.jpg" class="card-img-top" alt=" ">
                 <div class="card-body ">
-                    <h5 class="card-title ">Card title</h5>
-                    <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="# " class="btn btn-primary ">Go somewhere</a>
+                    <span class="btn card-label">19 January 2021</span>
+                    <p class="card-title">Minus aliquid alias porro iure fuga</p>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="# " class="link">Read More</a>
                 </div>
             </div>
         </div>
     </section>
-    <section contact>
-
+    <section contact id="contact">
         <div class="contact-grid">
             <div class="contact-form">
-                <h3>Contact Us</h3>
-                <h4>Bostorek Bookstore</h4>
-                <h1>For All Your<br/>Reading Needs</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora sequi fugiat veniam cum.</p>
-                <button type="button" class="btn btn-primary">Read More</button>
+                <form id="contact" action="" method="post">
+                    <h3>Contact Us</h3>
+                    <fieldset>
+                        <input placeholder="Name" type="text" tabindex="1" required autofocus>
+                    </fieldset>
+                    <fieldset>
+                        <input placeholder="Email" type="email" tabindex="2" required>
+                    </fieldset>
+                    <fieldset>
+                        <input placeholder="Phone Number (optional)" type="tel" tabindex="3" required>
+                    </fieldset>
+
+                    <fieldset>
+                        <textarea placeholder="Message" tabindex="5" required></textarea>
+                    </fieldset>
+                    <fieldset>
+                        <button name="submit" class="btn btn-primary" type="submit" id="contact-submit" data-submit="...Sending">SEND</button>
+                    </fieldset>
+
+                </form>
             </div>
-            <img src="../assets/img/contact-img.jpg" alt="">
+            <img src="../assets/img/contact-img.png" alt="">
         </div>
     </section>
     <section footer>
         <div>
             <h3 class="white">About Us</h3>
+            <p class="white m-bottom">Vitae aut explicabo fugit facere alias distinctio, exemen commodi mollitia minusem dignissimos atqueasperiores inciduntvel voluptate iste</p>
+            <i class="fa fa-facebook"></i> <i class="fa fa-twitter"></i><i class="fa fa-linkedin"></i><i class="fa fa-instagram"></i>
         </div>
         <div>
             <h3 class="white">Address</h3>
+            <p class="white"><i class="fa fa-map-marker simple"></i> Location</p>
+            <p class="white"><i class="fa fa-phone simple"></i> Call +01 1234567890</p>
+            <p class="white"><i class="fa fa-envelope simple"></i> demo@gmail.com</p>
         </div>
     </section>
 </div>

@@ -1,0 +1,50 @@
+$darkBlue: #063547;
+$greyLight: #f5f6f9;
+$lightBlue: #44b89d;
+$text: #0c0c0c;
+$yellow:#f59e0d;
+$mint:#11b981;
+$grey: #818183;
+.card {
+    width: 100%;
+    padding: 5px;
+    .image-holder {
+        background: $greyLight;
+        text-align: center;
+        padding: 20px;
+        span {
+            background: white;
+            border-radius: 50%;
+            width: 105px;
+            height: 105px;
+            display: inline-block;
+            padding: 23px;
+            .card-img-top {
+                width: 50px;
+            }
+        }
+    }
+    .card-price {
+        float: right;
+        color: $lightBlue;
+    }
+    .card-title {
+        font-size: 18px;
+        margin-top: 3px;
+        font-weight: 500;
+        color: $text;
+        margin-bottom: 5px;
+    }
+    .card-text {
+        color: $grey;
+        margin-bottom: 10px;
+    }
+    .card-language {
+        background: $grey;
+        padding: 6px;
+        color: white;
+        border-radius: 50%;
+        font-size: 10px;
+        margin-right: 5px;
+    }
+}
